@@ -28,6 +28,16 @@ Example:
 }
 ```
 
+1. Create .jsconfig.json
+
+```json
+{
+    "compilerOptions": {
+        "checkJs": true
+    }
+}
+```
+
 # TODO
 
 - [ ] Automate git repo clones
