@@ -21,6 +21,8 @@ Plugin 'prettier/vim-prettier'  " Formatting Engine
 Plugin 'ctrlpvim/ctrlp.vim'     " File Search
 Plugin 'rking/ag.vim'           " File Content Search
 Plugin 'Valloric/YouCompleteMe' " Autocomplete
+Plugin 'tpope/vim-fugitive'     " Git integration
+Plugin 'tpope/vim-rhubarb'      " Github integration
 
 " UI Plugins
 Plugin 'itchyny/lightline.vim'  " Status Bar
@@ -50,7 +52,19 @@ set background=dark
 colorscheme gruvbox
 
 " UI Settings
+" hide duplicate mode with status bar
 set noshowmode
+" configure lightline status bar
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
 " NerdTree Settings
 autocmd vimenter * NERDTree
