@@ -22,6 +22,9 @@ Plugin 'ctrlpvim/ctrlp.vim'     " File Search
 Plugin 'rking/ag.vim'           " File Content Search
 Plugin 'Valloric/YouCompleteMe' " Autocomplete
 
+" UI Plugins
+Plugin 'itchyny/lightline.vim'  " Status Bar
+
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin' " git labels
@@ -45,6 +48,9 @@ endif
 " Colour Schemes
 set background=dark
 colorscheme gruvbox
+
+" UI Settings
+set noshowmode
 
 " NerdTree Settings
 autocmd vimenter * NERDTree
