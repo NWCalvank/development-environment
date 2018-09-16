@@ -1,20 +1,3 @@
-" Features
-" global (base) vimrc
-"   - ability to be extended
-"   - a default color scheme
-"   - linting gutter
-"   - nerdtree
-"   - git gutter
-"   - remove trailing white space on save
-"   - file name search
-"   - autocomplete
-"   - file content search
-"
-" local vimrc
-"   - pick up local eslint config
-"   - local colour scheme
-"   - formatting (Prettier) on save
-
 " enable project-specific .vimrc files
 set exrc
 
@@ -33,26 +16,20 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 
 " Helper Plugins
-" Lint Engine      --- ALE
-Plugin 'w0rp/ale'
-" Formatting Engine --- Prettier
-Plugin 'prettier/vim-prettier'
-" Add Nerdtree
+Plugin 'w0rp/ale'               " Linting Engine
+Plugin 'prettier/vim-prettier'  " Formatting Engine
+Plugin 'ctrlpvim/ctrlp.vim'     " File Search
+Plugin 'rking/ag.vim'           " File Content Search
+Plugin 'Valloric/YouCompleteMe' " Autocomplete
+
+" NerdTree
 Plugin 'scrooloose/nerdtree'
-" Nerdtree git labels
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-" Nerdtree icons
-Plugin 'ryanoasis/vim-devicons'
-" Show Git Changes in Nerdtree
-Plugin 'airblade/vim-gitgutter'
-" Go Plugin
-Plugin 'fatih/vim-go'
-" File Search
-Plugin 'ctrlpvim/ctrlp.vim'
-" Autocomplete
-Plugin 'Valloric/YouCompleteMe'
-" File Content Search
-Plugin 'rking/ag.vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin' " git labels
+Plugin 'ryanoasis/vim-devicons'      " icons
+Plugin 'airblade/vim-gitgutter'      " Show Git Changes
+
+" Languages
+Plugin 'fatih/vim-go' " Go Plugin
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,6 +83,8 @@ set guifont=DroidSansMono_Nerd_Font:h11
 " Don't show YCM's preview window
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
+:command -nargs=* Rename YcmCompleter RefactorRename <args>
+:command Find YcmCompleter GoTo
 
 " Character Preferences
 set tabstop=2                      " number of visual spaces per TAB
