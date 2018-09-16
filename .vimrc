@@ -26,6 +26,7 @@ Plugin 'tpope/vim-rhubarb'      " Github integration
 
 " UI Plugins
 Plugin 'itchyny/lightline.vim'  " Status Bar
+Plugin 'maximbaz/lightline-ale' " ALE in status bar
 
 " NerdTree
 Plugin 'scrooloose/nerdtree'
@@ -50,21 +51,6 @@ endif
 " Colour Schemes
 set background=dark
 colorscheme gruvbox
-
-" UI Settings
-" hide duplicate mode with status bar
-set noshowmode
-" configure lightline status bar
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
 
 " NerdTree Settings
 autocmd vimenter * NERDTree
@@ -96,8 +82,38 @@ set showmatch                      " highlight matching [{()}]
 set incsearch                      " search as characters are entered
 set hlsearch                       " highlight matches
 set noerrorbells visualbell t_vb=  " no failure alert sound
+set noshowmode                     " hide duplicate status bar
 set encoding=utf8
 set guifont=DroidSansMono_Nerd_Font:h11
+" configure lightline status bar
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ 'component_expand': {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ },
+      \ 'component_type': {
+      \     'linter_checking': 'left',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'left',
+      \ },
+      \ }
+" ALE Status line icons
+let g:lightline#ale#indicator_checking = "\uf110 "
+let g:lightline#ale#indicator_warnings = "\uf071 "
+let g:lightline#ale#indicator_errors = "\uf05e "
+let g:lightline#ale#indicator_ok = "\uf00c "
 
 " Autocomplete Settings
 " Don't show YCM's preview window
