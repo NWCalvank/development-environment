@@ -86,6 +86,13 @@ set noerrorbells visualbell t_vb=  " no failure alert sound
 set noshowmode                     " hide duplicate status bar
 set encoding=utf8
 set guifont=DroidSansMono_Nerd_Font:h11
+" use relative numbers in insert mode only
+set number relativenumber
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 " configure lightline status bar
 let g:lightline = {
       \ 'colorscheme': 'wombat',
