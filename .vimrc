@@ -23,6 +23,7 @@ Plugin 'rking/ag.vim'           " File Content Search
 Plugin 'Valloric/YouCompleteMe' " Autocomplete
 Plugin 'tpope/vim-fugitive'     " Git integration
 Plugin 'tpope/vim-rhubarb'      " Github integration
+Plugin 'mattn/emmet-vim'        " HTML templating
 
 " UI Plugins
 Plugin 'itchyny/lightline.vim'  " Status Bar
