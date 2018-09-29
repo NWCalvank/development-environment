@@ -44,14 +44,16 @@ filetype plugin indent on    " required
 
 " Vundle Boilerplate End --------
 
+" Colour Schemes
+set background=dark
+colorscheme gruvbox
+
 " Enable Colours
 if !exists("g:syntax_on")
   syntax enable
 endif
-
-" Colour Schemes
-set background=dark
-colorscheme gruvbox
+" Custom filetype syntax highlighting
+au BufNewFile,BufRead *.vue set filetype=html
 
 " NerdTree Settings
 autocmd vimenter * NERDTree
