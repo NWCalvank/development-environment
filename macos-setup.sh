@@ -5,7 +5,7 @@ brew install cmake
 brew install the_silver_searcher
 cp .tern-config ~/.tern-config
 cp .jsconfig.json ~/.jsconfig.json
-cd ~/.vim/bundle/YouCompleteMe && ./install.py --tern-completer
 vim +PluginInstall +qall
 vim +PluginUpdate +qall
 vim +PluginInstall +qall
+cd ~/.vim/bundle/YouCompleteMe && ./install.py --tern-completer
