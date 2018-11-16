@@ -4,17 +4,19 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # install my favourite apps
-brew install git
 brew cask install alfred
 brew cask install docker
 brew cask install google-chrome
 brew cask install node
 brew cask install slack
 brew cask install spotify
+# install other tools
+brew install bash-completion
+brew install git
+brew install python
 brew cleanup
 
 # set up terminal
-brew install bash-completion
 cp .bash_profile ~/.bash_profile
 source ~/.bash_profile
 
