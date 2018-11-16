@@ -14,6 +14,7 @@ brew cask install spotify
 brew cleanup
 
 # set up terminal
+brew install bash-completion
 cp .bash_profile ~/.bash_profile
 source ~/.bash_profile
 
