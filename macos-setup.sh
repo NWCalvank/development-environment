@@ -10,6 +10,7 @@ brew cask install google-chrome
 brew cask install node
 brew cask install slack
 brew cask install spotify
+brew cask install sublime-text
 # install other tools
 brew install bash-completion
 brew install git
