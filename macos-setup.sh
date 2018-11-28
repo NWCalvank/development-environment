@@ -15,6 +15,7 @@ brew cask install sublime-text
 brew install bash-completion
 brew install git
 brew install python
+brew install jq
 brew cleanup
 
 # set up terminal
