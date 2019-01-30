@@ -17,6 +17,8 @@ brew install git
 brew install python
 brew install jq
 brew cleanup
+# install global dev deps
+npm install -g prettier
 
 # set up terminal
 cp .bash_profile ~/.bash_profile
