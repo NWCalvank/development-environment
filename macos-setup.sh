@@ -18,6 +18,7 @@ brew install python
 brew install jq
 brew cleanup
 # install global dev deps
+npm install -g eslint
 npm install -g prettier
 
 # set up terminal
