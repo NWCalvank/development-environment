@@ -12,6 +12,7 @@ brew cask install slack
 brew cask install spotify
 brew cask install sublime-text
 # install other tools
+brew install neovim
 brew install bash-completion
 brew install git
 brew install python
@@ -25,7 +26,7 @@ npm install -g prettier
 cp .bash_profile ~/.bash_profile
 source ~/.bash_profile
 
-# set up vim
+# set up Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp .vimrc-local ~/.vimrc
 brew install cmake
@@ -36,3 +37,10 @@ vim +PluginInstall +qall
 vim +PluginUpdate +qall
 vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe && ./install.py --tern-completer
+
+# set up NeoVim
+mkdir -p ~/.config/nvim/
+cp init-local.vim ~/.config/nvim/init.vim
+vim +PluginInstall +qall
+vim +PluginUpdate +qall
+vim +PluginInstall +qall
