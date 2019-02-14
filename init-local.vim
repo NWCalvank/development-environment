@@ -22,10 +22,11 @@ Plugin 'w0rp/ale'               " Linting Engine
 Plugin 'prettier/vim-prettier'  " Formatting Engine
 Plugin 'ctrlpvim/ctrlp.vim'     " File Search
 Plugin 'rking/ag.vim'           " File Content Search
-Plugin 'Valloric/YouCompleteMe' " Autocomplete
 Plugin 'tpope/vim-fugitive'     " Git integration
 Plugin 'tpope/vim-rhubarb'      " Github integration
 Plugin 'mattn/emmet-vim'        " HTML templating
+" NeoVim Specific
+Plugin 'Shougo/deoplete.nvim'   " Autocomplete
 
 " UI Plugins
 Plugin 'itchyny/lightline.vim'  " Status Bar
@@ -137,12 +138,14 @@ let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
 let g:lightline#ale#indicator_ok = "\uf00c "
 
+" Link Python
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " Autocomplete Settings
-" Don't show YCM's preview window
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
-:command -nargs=* Rename YcmCompleter RefactorRename <args>
-:command Find YcmCompleter GoTo
+let g:deoplete#enable_at_startup = 1
+" Map complete to tab
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Character Preferences
 set tabstop=2                      " number of visual spaces per TAB

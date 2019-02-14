@@ -16,6 +16,7 @@ brew install neovim
 brew install bash-completion
 brew install git
 brew install python
+brew install python3
 brew install jq
 brew cleanup
 # install global dev deps
@@ -39,8 +40,14 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe && ./install.py --tern-completer
 
 # set up NeoVim
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+
+pip2 install neovim --upgrade
+pip3 install neovim --upgrade
+
 mkdir -p ~/.config/nvim/
 cp init-local.vim ~/.config/nvim/init.vim
-vim +PluginInstall +qall
-vim +PluginUpdate +qall
-vim +PluginInstall +qall
+nvim +PluginInstall +qall
+nvim +PluginUpdate +qall
+nvim +PluginInstall +qall
