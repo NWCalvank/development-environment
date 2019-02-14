@@ -25,8 +25,9 @@ Plugin 'rking/ag.vim'           " File Content Search
 Plugin 'tpope/vim-fugitive'     " Git integration
 Plugin 'tpope/vim-rhubarb'      " Github integration
 Plugin 'mattn/emmet-vim'        " HTML templating
-" NeoVim Specific
-Plugin 'Shougo/deoplete.nvim'   " Autocomplete
+" NeoVim Autocomplete
+Plugin 'Shougo/deoplete.nvim'     " Deoplete Base
+Plugin 'carlitux/deoplete-ternjs' " JavaScript
 
 " UI Plugins
 Plugin 'itchyny/lightline.vim'  " Status Bar

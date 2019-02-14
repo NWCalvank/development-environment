@@ -22,6 +22,7 @@ brew cleanup
 # install global dev deps
 npm install -g eslint
 npm install -g prettier
+npm install -g tern
 
 # set up terminal
 cp .bash_profile ~/.bash_profile
@@ -45,6 +46,11 @@ python get-pip.py
 
 pip2 install neovim --upgrade
 pip3 install neovim --upgrade
+pip2 install pynvim
+pip3 install pynvim
+
+cp .tern-config ~/.tern-config
+cp .jsconfig.json ~/.jsconfig.json
 
 mkdir -p ~/.config/nvim/
 cp init-local.vim ~/.config/nvim/init.vim
