@@ -17,6 +17,7 @@ brew install bash-completion
 brew install git
 brew install python
 brew install python3
+brew install go
 brew install jq
 brew cleanup
 # install global dev deps
