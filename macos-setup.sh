@@ -24,6 +24,7 @@ brew cleanup
 npm install -g eslint
 npm install -g prettier
 npm install -g tern
+npm install -g neovim
 
 # set up terminal
 cp .bash_profile ~/.bash_profile
@@ -55,6 +56,19 @@ cp .jsconfig.json ~/.jsconfig.json
 
 mkdir -p ~/.config/nvim/
 cp init-local.vim ~/.config/nvim/init.vim
+
+# Install Vim-plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install with Vundle
 nvim +PluginInstall +qall
 nvim +PluginUpdate +qall
 nvim +PluginInstall +qall
+
+# Install with Vim-plug
+nvim +PlugInstall +qall
+
+# Set up Typescript server
+touch file.ts
+nvim file.ts +UpdateRemotePlugins +qall
+rm file.ts

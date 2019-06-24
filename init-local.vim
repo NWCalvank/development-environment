@@ -50,6 +50,16 @@ filetype plugin indent on    " required
 
 " Vundle Boilerplate End --------
 
+" Vim-plug begins
+call plug#begin()
+
+" Languages
+Plug 'HerringtonDarkholme/yats.vim'                        " Typescript Syntax File
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'} " Typescript Plugin
+
+call plug#end()
+" Vim-plug ends
+
 " Colour Schemes
 set background=dark
 colorscheme PaperColor
