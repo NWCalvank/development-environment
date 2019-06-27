@@ -19,6 +19,7 @@ brew install python
 brew install python3
 brew install go
 brew install jq
+brew install watch
 brew cleanup
 # install global dev deps
 npm install -g eslint
