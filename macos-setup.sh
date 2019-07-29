@@ -7,7 +7,6 @@
 brew cask install alfred
 brew cask install docker
 brew cask install google-chrome
-brew cask install node
 brew cask install slack
 brew cask install spotify
 brew cask install sublime-text
@@ -30,6 +29,12 @@ npm install -g neovim
 # set up terminal
 cp .bash_profile ~/.bash_profile
 source ~/.bash_profile
+
+# set up node version manager
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+source ~/.bash_profile
+nvm install node  # install latest version
+nvm install --lts # install LTS version
 
 # set up Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
