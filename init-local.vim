@@ -167,6 +167,7 @@ set expandtab                      " tabs are spaces
 " Movement / Key Bindings
 " jk is escape
 inoremap jk <esc>
+nnoremap ; :
 nmap <F10> :NERDTreeToggle<CR>
 
 " File Searching
