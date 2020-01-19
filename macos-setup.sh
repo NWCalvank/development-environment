@@ -1,4 +1,5 @@
 #!/bin/sh
+chsh -s /bin/bash
 
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -20,21 +21,23 @@ brew install go
 brew install jq
 brew install watch
 brew cleanup
-# install global dev deps
-npm install -g eslint
-npm install -g prettier
-npm install -g tern
-npm install -g neovim
 
 # set up terminal
 cp .bash_profile ~/.bash_profile
 source ~/.bash_profile
 
 # set up node version manager
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 source ~/.bash_profile
 nvm install node  # install latest version
 nvm install --lts # install LTS version
+
+# install global dev deps
+npm install -g eslint
+npm install -g prettier
+npm install -g tern
+npm install -g neovim
+npm install -g typescript
 
 # set up Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -51,11 +54,12 @@ cd ~/.vim/bundle/YouCompleteMe && ./install.py --tern-completer
 # set up NeoVim
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
+sudo python2.7 -m ensurepip
 
-pip2 install neovim --upgrade
-pip3 install neovim --upgrade
-pip2 install pynvim
-pip3 install pynvim
+pip2 install neovim --upgrade --user
+pip3 install neovim --upgrade --user
+pip2 install pynvim --user
+pip3 install pynvim --user
 
 cp .tern-config ~/.tern-config
 cp .jsconfig.json ~/.jsconfig.json
