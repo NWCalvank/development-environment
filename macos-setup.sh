@@ -82,3 +82,8 @@ nvim +PlugInstall +qall
 touch file.ts
 nvim file.ts +UpdateRemotePlugins +qall
 rm file.ts
+
+# Set up local git config
+git config --global user.name "Nathan Calvank"
+git config --global core.editor "nvim"
+nvim ~/.gitconfig # Opens file, ready to be updated with email
