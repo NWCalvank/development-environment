@@ -34,11 +34,11 @@ source ~/.bash_profile
 nvm install node  # install latest version
 nvm install --lts # install LTS version
 
-# Set Up Local git Config
-git config --global user.name "Nathan Calvank"
-git config --global core.editor "nvim"
-nvim ~/.gitconfig # Opens file, ready to be updated with email
-
 # Set Up Neovim
 mkdir -p ~/.config
 cp -r nvim ~/.config/
+
+# Set Up Local git Config
+git config --global user.name "Nathan Calvank"
+git config --global core.editor "nvim"
+nvim ~/.gitconfig +PackerSync
