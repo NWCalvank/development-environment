@@ -1,0 +1,41 @@
+" Enable Colours
+if !exists("g:syntax_on")
+  syntax enable
+endif
+
+" UI Settings
+set number                         " show line numbers
+set cursorline                     " highlight current line
+set wildmenu                       " visual autocomplete for command menu
+set showmatch                      " highlight matching [{()}]
+set incsearch                      " search as characters are entered
+set hlsearch                       " highlight matches
+set noerrorbells visualbell t_vb=  " no failure alert sound
+set noshowmode                     " hide duplicate status bar
+set encoding=utf8
+set guifont=DroidSansMono_Nerd_Font:h11
+
+" use relative numbers in insert mode only
+set number relativenumber
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+" Character Preferences
+set tabstop=4                      " number of visual spaces per TAB
+set shiftwidth=4                   " number of spaces when indenting
+set softtabstop=4                  " number of spaces in tab when editing
+set expandtab                      " tabs are spaces
+
+" Movement / Key Bindings
+" jk is escape
+inoremap jk <esc>
+nnoremap ; :
+
+" On Save
+autocmd BufWritePre * :%s/\s\+$//e " remove trailing whitespace
+
+" safe project-specific .vimrc files
+set secure
