@@ -28,6 +28,9 @@ cp .bash_profile ~/.bash_profile
 cp .bash_prompt ~/.bash_prompt
 source ~/.bash_profile
 
+# Set up Vim
+cp .vimrc-local ~/.vimrc
+
 # Set up Node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 source ~/.bash_profile
