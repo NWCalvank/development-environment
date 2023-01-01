@@ -16,6 +16,12 @@ The script completes with an open `.gitconfig` for you to modify.
 
 Time to start coding!
 
+## Ongoing Development
+
+When making changes to your development environment, you can update the files
+directly in this repo, and then run the provided Make commands to sync the
+relevant configuration.
+
 ## Credits
 
 After years of neglect, I have updated this setup using inspiration from:

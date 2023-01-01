@@ -3,6 +3,9 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
+" Custom filetype syntax highlighting
+au BufNewFile,BufRead *.vue set filetype=html
+
 " UI Settings
 set number                         " show line numbers
 set cursorline                     " highlight current line
@@ -23,10 +26,17 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
+" Autocomplete Settings
+" Don't show YCM's preview window
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+:command -nargs=* Rename YcmCompleter RefactorRename <args>
+:command Find YcmCompleter GoTo
+
 " Character Preferences
-set tabstop=4                      " number of visual spaces per TAB
-set shiftwidth=4                   " number of spaces when indenting
-set softtabstop=4                  " number of spaces in tab when editing
+set tabstop=2                      " number of visual spaces per TAB
+set shiftwidth=2                   " number of spaces when indenting
+set softtabstop=2                  " number of spaces in tab when editing
 set expandtab                      " tabs are spaces
 
 " Movement / Key Bindings
