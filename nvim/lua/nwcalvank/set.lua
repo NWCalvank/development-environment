@@ -27,8 +27,8 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 -- Set colorscheme
-vim.opt.termguicolors = false
-vim.cmd [[colorscheme PaperColor]]
+vim.opt.termguicolors = true
+vim.cmd [[colorscheme carbonfox]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'

@@ -14,15 +14,18 @@ return require('packer').startup(function(use)
     }
 
     -- Colour Themes
+    use 'EdenEast/nightfox.nvim'
+    use 'morhetz/gruvbox'
     use 'NLKNguyen/papercolor-theme'
     use 'navarasu/onedark.nvim'
+    use 'rose-pine/neovim'
 
     -- Editor Style
     use 'nvim-lualine/lualine.nvim' -- Fancier statusline
     use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
     -- Formatters
-	use 'prettier/vim-prettier'
+    use 'prettier/vim-prettier'
 
     -- Parsing & Language Server
     use { -- Highlight, edit, and navigate code
@@ -58,7 +61,7 @@ return require('packer').startup(function(use)
 	}
 
     -- Git Plugin
-	use 'tpope/vim-fugitive'
+    use 'tpope/vim-fugitive'
     use 'lewis6991/gitsigns.nvim'
 
 end)

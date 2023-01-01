@@ -3,7 +3,7 @@
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'PaperColor',
+    theme = 'carbonfox',
     component_separators = '|',
     section_separators = '',
   },

@@ -5,11 +5,12 @@ chsh -s /bin/bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install Some Apps I Like
-brew cask install alfred
-brew cask install docker
-brew cask install google-chrome
-brew cask install slack
-brew cask install spotify
+brew install --cask alfred
+brew install --cask docker
+brew install --cask google-chrome
+brew install --cask slack
+brew install --cask spotify
+brew install --cask iterm2
 
 # Install Other Tools
 brew install bash-completion
@@ -22,14 +23,11 @@ brew install ripgrep
 brew install watch
 brew cleanup
 
-# Set up Terminal
-cp .bash_alias ~/.bash_alias
-cp .bash_profile ~/.bash_profile
-cp .bash_prompt ~/.bash_prompt
-source ~/.bash_profile
+# Set up Bash Terminal
+make sync-bash
 
 # Set up Vim
-cp .vimrc-local ~/.vimrc
+make sync-vim
 
 # Set up Node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
@@ -38,8 +36,7 @@ nvm install node  # install latest version
 nvm install --lts # install LTS version
 
 # Set Up Neovim
-mkdir -p ~/.config
-cp -r nvim ~/.config/
+make sync-neovim
 
 # Set Up Local git Config
 git config --global user.name "Nathan Calvank"
