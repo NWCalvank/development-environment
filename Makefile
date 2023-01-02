@@ -1,3 +1,9 @@
+sync:
+	make sync-bash
+	make sync-vim
+	make sync-neovim
+	make sync-zsh
+
 sync-bash:
 	cp .aliases ~/.aliases
 	cp .bash_profile ~/.bash_profile
@@ -13,8 +19,3 @@ sync-vim:
 sync-zsh:
 	cp .aliases ~/.aliases
 	cp .zshrc ~/.zshrc
-
-sync:
-	make sync-bash
-	make sync-vim
-	make sync-neovim
