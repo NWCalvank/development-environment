@@ -1,5 +1,5 @@
 #!/bin/sh
-chsh -s /bin/bash
+chsh -s /bin/zsh # Change to /bin/bash if using bash
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -23,20 +23,23 @@ brew install ripgrep
 brew install watch
 brew cleanup
 
-# Set up Bash Terminal
+# Set up Bash Shell
 make sync-bash
 
 # Set up Vim
 make sync-vim
 
+# Set up Neovim
+make sync-neovim
+
+# Set up zsh Shell
+make sync-zsh
+
 # Set up Node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
-source ~/.bash_profile
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+source ~/.zshrc # Change to ~/.bash_profile if using bash
 nvm install node  # install latest version
 nvm install --lts # install LTS version
-
-# Set Up Neovim
-make sync-neovim
 
 # Set Up Local git Config
 git config --global user.name "Nathan Calvank"
