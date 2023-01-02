@@ -1,5 +1,5 @@
+source ~/.aliases
 source ~/.bash_prompt
-source ~/.bash_alias
 
 # export PATH with local python installation
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
