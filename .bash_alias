@@ -1,1 +1,0 @@
-alias commits='git log --pretty=oneline | head -n'

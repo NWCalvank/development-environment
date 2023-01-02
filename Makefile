@@ -1,8 +1,13 @@
+sync:
+	make sync-bash
+	make sync-vim
+	make sync-neovim
+	make sync-zsh
+
 sync-bash:
-	cp .bash_alias ~/.bash_alias
+	cp .aliases ~/.aliases
 	cp .bash_profile ~/.bash_profile
 	cp .bash_prompt ~/.bash_prompt
-	source ~/.bash_profile
 
 sync-neovim:
 	mkdir -p ~/.config
@@ -11,7 +16,6 @@ sync-neovim:
 sync-vim:
 	cp .vimrc-local ~/.vimrc
 
-sync:
-	make sync-bash
-	make sync-vim
-	make sync-neovim
+sync-zsh:
+	cp .aliases ~/.aliases
+	cp .zshrc ~/.zshrc
