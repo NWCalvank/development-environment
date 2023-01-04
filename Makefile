@@ -3,9 +3,10 @@ setup:
 
 sync:
 	make sync-bash
+	make sync-zsh
 	make sync-vim
 	make sync-neovim
-	make sync-zsh
+	make sync-packer
 
 sync-bash:
 	cp .aliases ~/.aliases
@@ -15,6 +16,9 @@ sync-bash:
 sync-neovim:
 	mkdir -p ~/.config
 	cp -r nvim ~/.config/
+
+sync-packer:
+	nvim +PackerSync
 
 sync-vim:
 	cp .vimrc-local ~/.vimrc

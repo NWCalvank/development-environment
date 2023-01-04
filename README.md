@@ -23,6 +23,18 @@ When making changes to your development environment, you can update the files
 directly in this repo, and then run the provided Make commands to sync the
 relevant configuration.
 
+To sync everything, you can simply re-run the setup command:
+```
+make setup
+```
+
+Or to only update Shell & (Neo)Vim settings:
+```
+make sync
+```
+
+See Makefile for the list of more precise sync commands.
+
 ## Credits
 
 After years of neglect, I have updated this setup using inspiration from:

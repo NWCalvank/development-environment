@@ -24,7 +24,6 @@ brew install eksctl
 brew install gcc
 brew install gdbm
 brew install gettext
-brew install gh
 brew install giflib
 brew install git
 brew install gmp
@@ -39,7 +38,7 @@ brew install krb5
 brew install kubernetes-cli
 brew install nasm
 brew install neovim
-brew install postgresql
+brew install postgresql@14
 brew install ripgrep
 brew install tree-sitter
 brew install watch
@@ -50,18 +49,6 @@ brew install argo
 brew install pulumi
 
 # Clean up
-brew uninstall node
-brew uninstall postgresql@14
-brew uninstall pyenv
-brew uninstall pyenv-virtualenv
-brew uninstall python
-brew uninstall python@3.10
-brew uninstall python@3.9
-brew uninstall redis
-brew uninstall sqlite
-brew uninstall the_silver_searcher
-
-brew uninstall --cask sublime-text
 brew cleanup
 
 # Set up Bash Shell
