@@ -7,7 +7,8 @@ that (if you use Neovim and happen to share all of my current preferences).
 
 ```bash
 git clone https://github.com/nwcalvank/development-environment.git
-cd development-environment && ./macos-setup.sh
+cd development-environment
+make setup
 ```
 
 You'll be prompted to provide a password to install Homebrew.
@@ -21,6 +22,18 @@ Time to start coding!
 When making changes to your development environment, you can update the files
 directly in this repo, and then run the provided Make commands to sync the
 relevant configuration.
+
+To sync everything, you can simply re-run the setup command:
+```
+make setup
+```
+
+Or to only update Shell & (Neo)Vim settings:
+```
+make sync
+```
+
+See Makefile for the list of more precise sync commands.
 
 ## Credits
 
