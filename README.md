@@ -8,7 +8,7 @@ that (if you use Neovim and happen to share all of my current preferences).
 ```bash
 git clone https://github.com/nwcalvank/development-environment.git
 cd development-environment
-. ./macos-setup.sh
+make setup
 ```
 
 You'll be prompted to provide a password to install Homebrew.

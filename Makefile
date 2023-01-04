@@ -1,3 +1,6 @@
+setup:
+	. ./macos-setup.sh
+
 sync:
 	make sync-bash
 	make sync-vim

@@ -1,26 +1,67 @@
 #!/bin/sh
-chsh -s /bin/zsh # Change to /bin/bash if using bash
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install Some Apps I Like
+brew install --cask adoptopenjdk8
 brew install --cask alfred
 brew install --cask docker
 brew install --cask google-chrome
 brew install --cask slack
 brew install --cask spotify
 brew install --cask iterm2
+brew install --cask visual-studio-code
 
 # Install Other Tools
+brew install aws-iam-authenticator
 brew install bash-completion
+brew install brotli
+brew install c-ares
+brew install ca-certificates
+brew install cmake
+brew install eksctl
+brew install gcc
+brew install gdbm
+brew install gettext
+brew install gh
+brew install giflib
 brew install git
+brew install gmp
 brew install go
+brew install icu4c
+brew install isl
+brew install jpeg
+brew install jpeg-turbo
 brew install jq
+brew install k9s
+brew install krb5
+brew install kubernetes-cli
 brew install nasm
 brew install neovim
+brew install postgresql
 brew install ripgrep
+brew install tree-sitter
 brew install watch
+brew install yarn
+
+# Install Work Tools
+brew install argo
+brew install pulumi
+
+# Clean up
+brew uninstall node
+brew uninstall postgresql@14
+brew uninstall pyenv
+brew uninstall pyenv-virtualenv
+brew uninstall python
+brew uninstall python@3.10
+brew uninstall python@3.9
+brew uninstall redis
+brew uninstall sqlite
+brew uninstall the_silver_searcher
+
+brew uninstall --cask sublime-text
 brew cleanup
 
 # Set up Bash Shell
