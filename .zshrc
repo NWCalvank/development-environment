@@ -1,5 +1,8 @@
 source ~/.aliases
 
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/nathancalvank/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -15,7 +18,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -30,3 +32,20 @@ COLOR_GIT='%F{46}'
 NEWLINE=$'\n'
 setopt PROMPT_SUBST
 export PROMPT='${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}${NEWLINE}%% '
+
+# AWS 2FA
+function aws-login() {
+  unset AWS_PROFILE
+
+  res=$(aws sts get-session-token --serial-number arn:aws:iam::967800896805:mfa/nathan-user --token-code "$1")
+
+  AWS_ACCESS_KEY_ID=$(echo $res | jq -r '.Credentials.AccessKeyId')
+  AWS_SECRET_ACCESS_KEY=$(echo $res | jq -r '.Credentials.SecretAccessKey')
+  AWS_SESSION_TOKEN=$(echo $res | jq -r '.Credentials.SessionToken')
+
+  aws configure set --profile mfa aws_access_key_id $AWS_ACCESS_KEY_ID
+  aws configure set --profile mfa aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+  aws configure set --profile mfa aws_session_token $AWS_SESSION_TOKEN
+
+  export AWS_PROFILE=mfa
+}
