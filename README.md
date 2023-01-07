@@ -5,6 +5,8 @@ that (if you use Neovim and happen to share all of my current preferences).
 
 ## MacOS
 
+In a bash terminal (must be bash!):
+
 ```bash
 git clone https://github.com/nwcalvank/development-environment.git
 cd development-environment
@@ -23,14 +25,9 @@ When making changes to your development environment, you can update the files
 directly in this repo, and then run the provided Make commands to sync the
 relevant configuration.
 
-To sync everything, you can simply re-run the setup command:
+To update everything, you can simply run the update command:
 ```
-make setup
-```
-
-Or to only update Shell & (Neo)Vim settings:
-```
-make sync
+make update
 ```
 
 See Makefile for the list of more precise sync commands.
