@@ -3,9 +3,9 @@ install:
 	brew upgrade
 
 	# Install Some Apps I Like
-	brew install --cask adoptopenjdk8
 	brew install --cask alfred
 	brew install --cask docker
+	brew install --cask firefox
 	brew install --cask google-chrome
 	brew install --cask slack
 	brew install --cask spotify
