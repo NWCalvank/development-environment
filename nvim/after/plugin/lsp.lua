@@ -6,7 +6,7 @@ lsp.ensure_installed({
 	'eslint',
 	'jedi_language_server',
 	'rust_analyzer',
-	'sumneko_lua',
+	'lua_ls',
 	'tsserver',
 })
 
@@ -59,7 +59,7 @@ end
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua', 'gopls' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'lua_ls', 'gopls' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
