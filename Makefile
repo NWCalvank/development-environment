@@ -42,6 +42,7 @@ install:
 	brew install postgresql@14
 	brew install python
 	brew install ripgrep
+	brew install rustup
 	brew install tree-sitter
 	brew install watch
 	brew install yarn
