@@ -60,8 +60,11 @@ return require('packer').startup(function(use)
 		}
 	}
 
-    -- Git Plugin
+    -- Git Plugins
     use 'tpope/vim-fugitive'
     use 'lewis6991/gitsigns.nvim'
+
+    -- Let Robots Code for Me
+    use 'github/copilot.vim'
 
 end)
