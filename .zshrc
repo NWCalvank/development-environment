@@ -49,3 +49,8 @@ function aws-login() {
 
   export AWS_PROFILE=mfa
 }
+
+# AWS CLI Helpers
+function aws-instances() {
+    aws ec2 describe-instance-type-offerings --location-type availability-zone --filters=Name=instance-type,Values="$2" --region "$1" --output table
+}
