@@ -33,6 +33,9 @@ NEWLINE=$'\n'
 setopt PROMPT_SUBST
 export PROMPT='${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}${NEWLINE}%% '
 
+# k9s
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # AWS 2FA
 function aws-login() {
   unset AWS_PROFILE
