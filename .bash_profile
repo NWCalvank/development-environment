@@ -14,3 +14,6 @@ export NVM_DIR="$HOME/.nvm"
 # Set neovim as default text editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+
+# Set Home for k9s
+export XDG_CONFIG_HOME="$HOME/.config"

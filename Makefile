@@ -61,12 +61,17 @@ sync:
 	make sync-zsh
 	make sync-vim
 	make sync-neovim
+	make sync-k9s
 	make sync-packer
 
 sync-bash:
 	cp .aliases ~/.aliases
 	cp .bash_profile ~/.bash_profile
 	cp .bash_prompt ~/.bash_prompt
+
+sync-k9s:
+	mkdir -p ~/.config
+	cp -r k9s ~/.config/
 
 sync-neovim:
 	mkdir -p ~/.config
