@@ -18,7 +18,6 @@ return require('packer').startup(function(use)
     use 'morhetz/gruvbox'
     use 'NLKNguyen/papercolor-theme'
     use 'navarasu/onedark.nvim'
-    use 'rose-pine/neovim'
 
     -- Editor Style
     use 'nvim-lualine/lualine.nvim' -- Fancier statusline
