@@ -36,6 +36,7 @@ install:
 	brew install k9s
 	brew install krb5
 	brew install kubernetes-cli
+	brew install kubernetes-helm
 	brew install nasm
 	brew install neovim
 	brew install postgresql@14
