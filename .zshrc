@@ -37,20 +37,30 @@ export PROMPT='${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}${NEWLI
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # AWS 2FA
-function aws-login() {
-  unset AWS_PROFILE
+function aws-login-archera() {
+    unset AWS_PROFILE
+    export AWS_PROFILE=archera
 
-  res=$(aws sts get-session-token --serial-number arn:aws:iam::967800896805:mfa/nathan-user --token-code "$1")
+    SERIAL_NUMBER=$(aws configure get mfa_serial)
 
-  AWS_ACCESS_KEY_ID=$(echo $res | jq -r '.Credentials.AccessKeyId')
-  AWS_SECRET_ACCESS_KEY=$(echo $res | jq -r '.Credentials.SecretAccessKey')
-  AWS_SESSION_TOKEN=$(echo $res | jq -r '.Credentials.SessionToken')
+    res=$(aws sts get-session-token --serial-number $SERIAL_NUMBER --token-code "$1")
 
-  aws configure set --profile mfa aws_access_key_id $AWS_ACCESS_KEY_ID
-  aws configure set --profile mfa aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-  aws configure set --profile mfa aws_session_token $AWS_SESSION_TOKEN
+    AWS_ACCESS_KEY_ID=$(echo $res | jq -r '.Credentials.AccessKeyId')
+    AWS_SECRET_ACCESS_KEY=$(echo $res | jq -r '.Credentials.SecretAccessKey')
+    AWS_SESSION_TOKEN=$(echo $res | jq -r '.Credentials.SessionToken')
 
-  export AWS_PROFILE=mfa
+    aws configure set --profile archera-mfa aws_access_key_id $AWS_ACCESS_KEY_ID
+    aws configure set --profile archera-mfa aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+    aws configure set --profile archera-mfa aws_session_token $AWS_SESSION_TOKEN
+
+    export AWS_PROFILE=archera-mfa
+}
+
+function aws-export-archera() {
+    export AWS_PROFILE=archera-mfa
+    export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id)
+    export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key)
+    export AWS_SESSION_TOKEN=$(aws configure get aws_session_token)
 }
 
 # AWS CLI Helpers
