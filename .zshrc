@@ -63,6 +63,9 @@ function aws-export-archera() {
     export AWS_SESSION_TOKEN=$(aws configure get aws_session_token)
 }
 
+# Run automatically in new shells
+aws-export-archera
+
 # AWS CLI Helpers
 function aws-instances() {
     aws ec2 describe-instance-type-offerings --location-type availability-zone --filters=Name=instance-type,Values="$2" --region "$1" --output table
