@@ -38,12 +38,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # AWS 2FA
 function aws-login-archera() {
-    unset AWS_PROFILE
-    export AWS_PROFILE=archera
+    SERIAL_NUMBER=$(aws configure get --profile archera mfa_serial)
 
-    SERIAL_NUMBER=$(aws configure get mfa_serial)
-
-    res=$(aws sts get-session-token --serial-number $SERIAL_NUMBER --token-code "$1")
+    res=$(aws sts get-session-token --profile archera --serial-number $SERIAL_NUMBER --token-code "$1")
 
     AWS_ACCESS_KEY_ID=$(echo $res | jq -r '.Credentials.AccessKeyId')
     AWS_SECRET_ACCESS_KEY=$(echo $res | jq -r '.Credentials.SecretAccessKey')
@@ -52,8 +49,6 @@ function aws-login-archera() {
     aws configure set --profile archera-mfa aws_access_key_id $AWS_ACCESS_KEY_ID
     aws configure set --profile archera-mfa aws_secret_access_key $AWS_SECRET_ACCESS_KEY
     aws configure set --profile archera-mfa aws_session_token $AWS_SESSION_TOKEN
-
-    export AWS_PROFILE=archera-mfa
 }
 
 function aws-export-archera() {
