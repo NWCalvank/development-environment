@@ -7,7 +7,9 @@ install:
 	brew install --cask docker
 	brew install --cask firefox
 	brew install --cask google-chrome
+	brew install --cask google-drive
 	brew install --cask iterm2
+	brew install --cask obsidian
 	brew install --cask slack
 	brew install --cask spotify
 	brew install --cask whatsapp
