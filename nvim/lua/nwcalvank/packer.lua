@@ -64,6 +64,6 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     -- Let Robots Code for Me
-    -- use 'github/copilot.vim'
+    use 'github/copilot.vim'
 
 end)
