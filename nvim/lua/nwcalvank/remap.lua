@@ -18,3 +18,8 @@ vim.keymap.set("n", "<leader>t", [[:split<enter>:terminal<enter>A]])  -- enter t
 vim.keymap.set("n", "<leader>T", [[:vsplit<enter>:terminal<enter>A]]) -- enter terminal vsplit
 vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])                          -- leave terminal mode
 vim.keymap.set("t", "<esc><esc>", [[<C-\><C-n>:bd!<enter>]])          -- leave & close terminal
+
+-- Copilot
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-H>", 'copilot#Previous()', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Next()', { silent = true, expr = true })
