@@ -1,5 +1,7 @@
 # Github
 alias commits='git log --pretty=oneline | head -n'
+alias staging='API_URL=http://localhost:5002 make start'
+alias production='API_URL=http://localhost:5003 make start'
 
 # Change Directory
 alias blog='cd ~/Code/personal-projects/nwcalvank.dev/'

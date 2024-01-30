@@ -1,5 +1,6 @@
 install:
 	# Upgrade all existing apps, if any
+	brew update
 	brew upgrade
 
 	# Install Some Apps I Like
