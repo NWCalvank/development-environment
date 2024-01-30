@@ -4,8 +4,8 @@ source ~/.bash_prompt
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# export PATH with local python installation
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# Make python3 the default python
+export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
