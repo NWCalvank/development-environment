@@ -15,6 +15,9 @@ install:
 	brew install --cask spotify
 	brew install --cask whatsapp
 
+	# Install Work Apps
+	brew install --cask aws-vpn-client
+
 	# Install Other Tools
 	brew install awscli
 	brew install aws-iam-authenticator
