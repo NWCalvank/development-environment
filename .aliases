@@ -1,3 +1,9 @@
+# Archera
+alias login='aws-login-archera operations'
+alias login-dev='aws-login-archera developer'
+alias archera='aws-export-archera operations'
+alias archera-dev='aws-export-archera developer'
+
 # Github
 alias commits='git log --pretty=oneline | head -n'
 alias staging='API_URL=http://localhost:5002 make start'
