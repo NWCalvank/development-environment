@@ -41,7 +41,7 @@ set expandtab                      " tabs are spaces
 
 " Movement / Key Bindings
 " jk is escape
-inoremap jk <esc>
+inoremap jk <Esc>
 nnoremap ; :
 
 " On Save

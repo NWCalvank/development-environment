@@ -89,6 +89,7 @@ sync-packer:
 
 sync-vim:
 	cp .vimrc-local ~/.vimrc
+	cp .vimrc-local ~/Obsidian/HelloWorld/.vimrc
 
 sync-zsh:
 	cp .aliases ~/.aliases
