@@ -19,10 +19,12 @@ install:
 	brew install --cask aws-vpn-client
 
 	# Install Other Tools
+	brew install argocd
 	brew install awscli
 	brew install aws-iam-authenticator
 	brew install bash-completion
 	brew install brotli
+	brew install brogue
 	brew install c-ares
 	brew install ca-certificates
 	brew install cmake
@@ -45,7 +47,9 @@ install:
 	brew install kubernetes-cli
 	brew install nasm
 	brew install neovim
-	brew install postgresql@14
+	brew install postgresql@15
+	brew install pyenv
+	brew install pyenv-virtualenv
 	brew install python
 	brew install ripgrep
 	brew install rustup
