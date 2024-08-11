@@ -1,8 +1,10 @@
 # Archera
 alias login='aws-login-archera developer'
 alias login-ops='aws-login-archera operations'
+alias login-ro='aws-login-archera readonly'
 alias archera='aws-export-archera developer'
 alias archera-ops='aws-export-archera operations'
+alias archera-ro='aws-export-archera readonly'
 
 # Github
 alias commits='git log --pretty=oneline | head -n'
@@ -14,4 +16,4 @@ alias blog='cd ~/Code/personal-projects/nwcalvank.dev/'
 alias compiler='cd ~/Code/personal-projects/writing_an_interpreter_in_go_1.7/my-code/'
 alias dev='cd ~/Code/development-environment/'
 alias rust='cd ~/Code/personal-projects/rust/'
-alias work='cd ~/Code/archera/reserved-ai/ && archera'
+alias work='cd ~/Code/archera/reserved-ai/server && archera'
