@@ -7,10 +7,8 @@ lsp.ensure_installed({
 	'jedi_language_server',
 	'rust_analyzer',
 	'lua_ls',
-	'tsserver',
+	'ts_ls',
 })
-
-lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true,
@@ -59,9 +57,10 @@ end
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'lua_ls', 'gopls' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'ts_ls', 'lua_ls', 'gopls' }
 
 -- Ensure the servers above are installed
+require("mason").setup()
 require('mason-lspconfig').setup {
   ensure_installed = servers,
 }
