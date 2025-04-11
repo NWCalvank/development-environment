@@ -3,6 +3,10 @@ install:
 	brew update
 	brew upgrade
 
+	# Set up taps
+	brew tap hashicorp/tap
+	brew tap sqitchers/sqitch
+
 	# Install Some Apps I Like
 	brew install --cask alfred
 	brew install --cask docker
@@ -17,6 +21,8 @@ install:
 
 	# Install Work Apps
 	brew install --cask aws-vpn-client
+	brew install --cask google-cloud-sdk
+	gcloud components install gke-gcloud-auth-plugin
 
 	# Install Other Tools
 	brew install argocd
@@ -60,6 +66,10 @@ install:
 	# Install Work Tools
 	brew install argo
 	brew install pulumi
+
+	# Install Tap Apps
+	brew install hashicorp/tap/terraform
+	brew install sqitch --with-postgres-support
 
 	# Clean up
 	brew cleanup
