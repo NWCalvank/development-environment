@@ -30,7 +30,10 @@ source ~/.bash_profile
 nvm install node  # install latest version
 nvm install --lts # install LTS version
 
+# Set up Neovim package manager
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 # Set Up Local git Config
 git config --global user.name "Nathan Calvank"
 git config --global core.editor "nvim"
-nvim ~/.gitconfig +PackerSync
+nvim ~/.gitconfig +PackerInstall

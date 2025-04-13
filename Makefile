@@ -10,6 +10,7 @@ install:
 	# Install Some Apps I Like
 	brew install --cask alfred
 	brew install --cask docker
+	brew install --cask expressvpn
 	brew install --cask firefox
 	brew install --cask google-chrome
 	brew install --cask google-drive
@@ -17,6 +18,7 @@ install:
 	brew install --cask obsidian
 	brew install --cask slack
 	brew install --cask spotify
+	brew install --cask sqlectron
 	brew install --cask whatsapp
 
 	# Install Work Apps
@@ -103,7 +105,7 @@ sync-packer:
 
 sync-vim:
 	cp .vimrc-local ~/.vimrc
-	cp .vimrc-local ~/Obsidian/HelloWorld/.vimrc
+	cp .vimrc-local ~/Google\ Drive/My\ Drive/Obsidian/HelloWorld/.vimrc
 
 sync-zsh:
 	cp .aliases ~/.aliases
