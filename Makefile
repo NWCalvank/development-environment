@@ -24,6 +24,7 @@ install:
 	# Install Work Apps
 	brew install --cask aws-vpn-client
 	brew install --cask google-cloud-sdk
+	brew install --cask microsoft-teams
 	gcloud components install gke-gcloud-auth-plugin
 
 	# Install Other Tools

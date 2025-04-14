@@ -17,6 +17,7 @@ alias production='API_URL=http://localhost:5003 make start'
 
 # Change Directory
 alias blog='cd ~/Code/personal-projects/nwcalvank.dev/'
+alias code='cd ~/Code/$PRIMARY_PROJECT'
 alias dev='cd ~/Code/development-environment/'
 alias rust='cd ~/Code/personal-projects/rust/'
 alias work='cd ~/Code/archera/reserved-ai/server && archera'
