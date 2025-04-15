@@ -1,4 +1,5 @@
-require('gitsigns').setup {
+return {
+  'lewis6991/gitsigns.nvim',
   signs = {
     add = { text = '+' },
     change = { text = '~' },

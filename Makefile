@@ -87,7 +87,6 @@ sync:
 	make sync-vim
 	make sync-neovim
 	make sync-k9s
-	make sync-packer
 
 sync-bash:
 	cp .aliases ~/.aliases
@@ -101,9 +100,6 @@ sync-k9s:
 sync-neovim:
 	mkdir -p ~/.config
 	cp -r nvim ~/.config/
-
-sync-packer:
-	nvim +PackerSync
 
 sync-vim:
 	cp .vimrc-local ~/.vimrc

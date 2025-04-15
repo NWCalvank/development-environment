@@ -40,4 +40,4 @@ sudo luarocks install luasocket
 # Set Up Local git Config
 git config --global user.name "Nathan Calvank"
 git config --global core.editor "nvim"
-nvim ~/.gitconfig +PackerInstall
+nvim ~/.gitconfig
