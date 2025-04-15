@@ -64,6 +64,7 @@ install:
 	brew install rustup
 	brew install tree-sitter
 	brew install watch
+	brew install wget
 	brew install yarn
 
 	# Install Work Tools
@@ -109,7 +110,9 @@ sync-vim:
 	cp .vimrc-local ~/Google\ Drive/My\ Drive/Obsidian/HelloWorld/.vimrc
 
 sync-zsh:
+	touch .env
 	cp .aliases ~/.aliases
+	cp .env ~/.env
 	cp .zshrc ~/.zshrc
 
 update:

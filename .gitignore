@@ -1,3 +1,4 @@
 .DS_Store
 *.swp
+.env
 nvim/plugin/packer_compiled.lua

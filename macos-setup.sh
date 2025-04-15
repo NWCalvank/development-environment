@@ -31,7 +31,11 @@ nvm install node  # install latest version
 nvm install --lts # install LTS version
 
 # Set up Neovim package manager
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
+tar zxpf luarocks-3.11.1.tar.gz
+cd luarocks-3.11.1
+./configure && make && sudo make install
+sudo luarocks install luasocket
 
 # Set Up Local git Config
 git config --global user.name "Nathan Calvank"
