@@ -26,9 +26,8 @@ vim.wo.signcolumn = 'yes'
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
--- Set colorscheme
+-- Set colors
 vim.opt.termguicolors = true
--- vim.cmd [[colorscheme carbonfox]]
 
 -- Format on save
 -- TODO: Update LSP to respect Prettier/ESLintrc to support all languages

@@ -36,6 +36,16 @@ tar zxpf luarocks-3.11.1.tar.gz
 cd luarocks-3.11.1
 ./configure && make && sudo make install
 sudo luarocks install luasocket
+cd ..
+sudo rm -r luarocks-3.11.1
+rm luarocks-3.11.1.tar.gz
+
+# Add Color Plugins
+git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git
+cd pokemon-colorscripts
+sudo ./install.sh
+cd ..
+sudo rm -r pokemon-colorscripts
 
 # Set Up Local git Config
 git config --global user.name "Nathan Calvank"

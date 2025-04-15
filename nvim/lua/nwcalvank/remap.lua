@@ -23,3 +23,6 @@ vim.keymap.set("t", "<esc><esc>", [[<C-\><C-n>:bd!<enter>]])          -- leave &
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-H>", 'copilot#Previous()', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Next()', { silent = true, expr = true })
+
+-- Fugitive
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)

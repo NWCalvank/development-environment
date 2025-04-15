@@ -6,8 +6,14 @@
 -- end)
 
 return {
-  'nvim-telescope/telescope.nvim', branch = '0.1.x',
-  dependencies = { 'nvim-lua/plenary.nvim' }
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    defaults = {
+        mappings = {
+            i = {
+                ['<C-u>'] = false,
+                ['<C-d>'] = false,
+            },
+        },
+    },
 }
-
--- require('telescope').setup { defaults = { mappings = { i = { ['<C-u>'] = false, ['<C-d>'] = false, }, }, }, }

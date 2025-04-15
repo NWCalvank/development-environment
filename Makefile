@@ -54,6 +54,7 @@ install:
 	brew install k9s
 	brew install krb5
 	brew install kubernetes-cli
+	brew install lua
 	brew install nasm
 	brew install neovim
 	brew install postgresql@15
@@ -99,6 +100,7 @@ sync-k9s:
 
 sync-neovim:
 	mkdir -p ~/.config
+	rm -r ~/.config/nvim
 	cp -r nvim ~/.config/
 
 sync-vim:
