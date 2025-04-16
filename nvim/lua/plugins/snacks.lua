@@ -8,7 +8,22 @@ return {
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
     bigfile = { enabled = false },
-    dashboard = { enabled = true, example = "pokemon" },
+    dashboard = {
+      enabled = true,
+      sections = {
+        { section = "header" },
+        { section = "keys", gap = 1, padding = 1 },
+        { section = "startup" },
+        {
+          section = "terminal",
+          cmd = "pokemon-colorscripts -n pikachu -r --no-title; sleep .1",
+          random = 10,
+          pane = 2,
+          indent = 4,
+          height = 30,
+        },
+      },
+    },
     explorer = { enabled = false },
     indent = { enabled = true },
     input = { enabled = false },
