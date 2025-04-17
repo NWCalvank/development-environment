@@ -61,9 +61,27 @@ return {
       lsp_zero.extend_lspconfig()
 
       lsp_zero.on_attach(function(client, bufnr)
+        local nmap = function(keys, func, desc)
+          if desc then
+            desc = 'LSP: ' .. desc
+          end
+
+          vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+        end
+
+        nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
         -- see :help lsp-zero-keybindings
         -- to learn the available actions
-        lsp_zero.default_keymaps({buffer = bufnr, preserve_mappings = false})
+        lsp_zero.default_keymaps({ buffer = bufnr, preserve_mappings = false })
+
+        -- Create a command `:Format` local to the LSP buffer
+        vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
+          if vim.lsp.buf.format then
+            vim.lsp.buf.format()
+          elseif vim.lsp.buf.formatting then
+            vim.lsp.buf.formatting()
+          end
+        end, { desc = 'Format current buffer with LSP' })
       end)
 
       require('mason-lspconfig').setup({
