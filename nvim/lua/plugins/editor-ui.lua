@@ -6,10 +6,10 @@ return {
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
-        lazy = true,
+        lazy = false,
         options = {
             icons_enabled = true,
-            theme = 'carbonfox',
+            theme = 'nightfox',
             component_separators = '|',
             -- section_separators = '',
             section_separators = { left = '', right = ''},
