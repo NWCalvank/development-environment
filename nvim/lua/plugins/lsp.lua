@@ -1,7 +1,3 @@
-vim.diagnostic.config({
-  virtual_text = true,
-})
-
 local format_buffer = function(_)
   if vim.lsp.buf.format then
     vim.lsp.buf.format()
