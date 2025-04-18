@@ -2,7 +2,6 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
-  ---@type snacks.Config
   opts = {
     -- your configuration comes here
     -- or leave it empty to use the default settings
@@ -12,7 +11,7 @@ return {
       enabled = true,
       sections = {
         { section = "header" },
-        { section = "keys", gap = 1, padding = 1 },
+        { section = "keys",   gap = 1, padding = 1 },
         { section = "startup" },
         {
           section = "terminal",
@@ -38,16 +37,16 @@ return {
   },
   keys = {
     -- Top Pickers & Explorer
-    { "<leader>k", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
-    { "<leader>h", function() Snacks.picker.buffers() end, desc = "Buffers" },
-    { "<leader>ps", function() Snacks.picker.grep() end, desc = "Grep" },
-    { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
-    { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
+    { "<leader>k",  function() Snacks.picker.smart() end,                     desc = "Smart Find Files" },
+    { "<leader>h",  function() Snacks.picker.buffers() end,                   desc = "Buffers" },
+    { "<leader>ps", function() Snacks.picker.grep() end,                      desc = "Grep" },
+    { "<leader>:",  function() Snacks.picker.command_history() end,           desc = "Command History" },
+    { "<leader>n",  function() Snacks.picker.notifications() end,             desc = "Notification History" },
     -- LSP
-    { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
-    { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
+    { "gd",         function() Snacks.picker.lsp_definitions() end,           desc = "Goto Definition" },
+    { "gr",         function() Snacks.picker.lsp_references() end,            nowait = true,                desc = "References" },
     -- Other
     { "<leader>d",  function() Snacks.dashboard({ example = "pokemon" }) end, desc = "Show Dashboard" },
-    { "<leader>z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
+    { "<leader>z",  function() Snacks.zen() end,                              desc = "Toggle Zen Mode" },
   },
 }
