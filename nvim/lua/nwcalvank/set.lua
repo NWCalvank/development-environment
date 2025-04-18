@@ -26,14 +26,13 @@ vim.wo.signcolumn = 'yes'
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
--- Set colorscheme
+-- Set colors
 vim.opt.termguicolors = true
-vim.cmd [[colorscheme carbonfox]]
 
 -- Format on save
 -- TODO: Update LSP to respect Prettier/ESLintrc to support all languages
-vim.cmd [[autocmd BufWritePre *.rs lua vim.lsp.buf.format()]]
-vim.cmd [[autocmd BufWritePre *.go lua vim.lsp.buf.format()]]
+-- vim.cmd [[autocmd BufWritePre *.rs lua vim.lsp.buf.format()]]
+-- vim.cmd [[autocmd BufWritePre *.go lua vim.lsp.buf.format()]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'

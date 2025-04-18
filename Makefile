@@ -54,6 +54,7 @@ install:
 	brew install k9s
 	brew install krb5
 	brew install kubernetes-cli
+	brew install lua
 	brew install nasm
 	brew install neovim
 	brew install postgresql@15
@@ -64,6 +65,7 @@ install:
 	brew install rustup
 	brew install tree-sitter
 	brew install watch
+	brew install wget
 	brew install yarn
 
 	# Install Work Tools
@@ -86,7 +88,6 @@ sync:
 	make sync-vim
 	make sync-neovim
 	make sync-k9s
-	make sync-packer
 
 sync-bash:
 	cp .aliases ~/.aliases
@@ -99,17 +100,17 @@ sync-k9s:
 
 sync-neovim:
 	mkdir -p ~/.config
+	rm -r ~/.config/nvim
 	cp -r nvim ~/.config/
-
-sync-packer:
-	nvim +PackerSync
 
 sync-vim:
 	cp .vimrc-local ~/.vimrc
 	cp .vimrc-local ~/Google\ Drive/My\ Drive/Obsidian/HelloWorld/.vimrc
 
 sync-zsh:
+	touch .env
 	cp .aliases ~/.aliases
+	cp .env ~/.env
 	cp .zshrc ~/.zshrc
 
 update:
