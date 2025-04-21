@@ -29,6 +29,11 @@ vim.opt.incsearch = true
 -- Set colors
 vim.opt.termguicolors = true
 
+-- Inline diagnostics (error/warning/info)
+vim.diagnostic.config({
+    virtual_text = true,
+})
+
 -- Format on save
 -- TODO: Update LSP to respect Prettier/ESLintrc to support all languages
 -- vim.cmd [[autocmd BufWritePre *.rs lua vim.lsp.buf.format()]]
