@@ -39,7 +39,7 @@ return {
     -- Top Pickers & Explorer
     { "<leader>k",  function() Snacks.picker.smart() end,                     desc = "Smart Find Files" },
     { "<leader>h",  function() Snacks.picker.buffers() end,                   desc = "Buffers" },
-    { "<leader>ps", function() Snacks.picker.grep() end,                      desc = "Grep" },
+    { "<leader>g", function() Snacks.picker.grep() end,                       desc = "Grep" },
     { "<leader>:",  function() Snacks.picker.command_history() end,           desc = "Command History" },
     { "<leader>n",  function() Snacks.picker.notifications() end,             desc = "Notification History" },
     -- LSP
