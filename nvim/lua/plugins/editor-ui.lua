@@ -51,6 +51,13 @@ return {
 
             -- load the colorscheme here
             vim.cmd([[colorscheme nightfox]])
+
+            -- Custom filetype highlights
+            vim.filetype.add({
+              extension = {
+                handlebars = "html",
+              },
+            })
         end,
 
     }
