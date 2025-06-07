@@ -63,7 +63,6 @@ install:
 	brew install python
 	brew install ripgrep
 	brew install rustup
-	brew install serve
 	brew install tree-sitter
 	brew install watch
 	brew install wget
