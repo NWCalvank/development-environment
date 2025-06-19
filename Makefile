@@ -70,6 +70,7 @@ install:
 
 	# Install Work Tools
 	brew install argo
+	brew install azure-cli
 	brew install pulumi
 
 	# Install Tap Apps
