@@ -1,3 +1,9 @@
+-- Configure Editor Colours
+vim.g.circadian_day_start = 8
+vim.g.circadian_night_start = 17
+vim.g.circadian_day_theme = 'github_light'
+vim.g.circadian_night_theme = 'nightfox'
+
 return {
     -- Fancier statusline
     {
@@ -13,6 +19,8 @@ return {
     },
 
     -- Colour & Font Styles
+    {   'adamnsch/vim-circadian' },
+    {   'projekt0n/github-nvim-theme', name = 'github-theme' },
     {
         "EdenEast/nightfox.nvim",
         lazy = false, -- make sure we load this during startup if it is your main colorscheme
