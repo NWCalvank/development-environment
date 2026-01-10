@@ -9,6 +9,7 @@ install:
 
 	# Install Some Apps I Like
 	brew install --cask alfred
+	brew install --cask balenaetcher
 	brew install --cask docker
 	brew install --cask expressvpn
 	brew install --cask firefox
@@ -17,8 +18,8 @@ install:
 	brew install --cask iterm2
 	brew install --cask obsidian
 	brew install --cask slack
-	brew install --cask spotify
 	brew install --cask sqlectron
+	brew install --cask tailscale-app
 	brew install --cask whatsapp
 
 	# Install Work Apps
@@ -46,6 +47,7 @@ install:
 	brew install git
 	brew install gmp
 	brew install go
+	brew install helm
 	brew install icu4c
 	brew install isl
 	brew install jpeg
@@ -58,11 +60,14 @@ install:
 	brew install nasm
 	brew install neovim
 	brew install postgresql@15
+	brew install pulumi
 	brew install pyenv
 	brew install pyenv-virtualenv
 	brew install python
 	brew install ripgrep
 	brew install rustup
+	brew install stats
+	brew install talosctl
 	brew install tree-sitter
 	brew install watch
 	brew install wget
@@ -71,7 +76,7 @@ install:
 	# Install Work Tools
 	brew install argo
 	brew install azure-cli
-	brew install pulumi
+	brew install uv
 
 	# Install Tap Apps
 	brew install hashicorp/tap/terraform
