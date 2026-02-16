@@ -1,4 +1,7 @@
 .DS_Store
 *.swp
-.env
 nvim/plugin/packer_compiled.lua
+
+# Personal settings and secrets
+.env
+mise.local.toml

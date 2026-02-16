@@ -108,7 +108,7 @@ sync-k9s:
 	cp -r k9s ~/.config/
 
 sync-neovim:
-	mkdir -p ~/.config
+	mkdir -p ~/.config/nvim
 	rm -r ~/.config/nvim
 	cp -r nvim ~/.config/
 
@@ -117,12 +117,10 @@ sync-vim:
 	cp .vimrc-local ~/Google\ Drive/My\ Drive/Obsidian/HelloWorld/.vimrc
 
 sync-zsh:
-	touch .env
 	mkdir -p ~/.config/mise
-	cp .aliases ~/.aliases
-	cp .env ~/.env
-	cp .zshrc ~/.zshrc
 	cp mise-config.toml ~/.config/mise/config.toml
+	cp .aliases ~/.aliases
+	cp .zshrc ~/.zshrc
 
 update:
 	make install

@@ -1,9 +1,18 @@
-# Setup
+# MacOS Development Environment
 
-Sometimes, you just want to get up-and-running with a new machine. This does
-that (if you use Neovim and happen to share all of my current preferences).
+Declarative configuration for a MacOS development environment, using:
+- [Homebrew](https://brew.sh/) for application management
+- [Mise](https://mise.jdx.dev/) for development environment management
 
-## MacOS
+Notable Tools:
+- [Ghostty](https://ghostty.org/): Terminal emulator
+- [K9s](https://k9scli.io/): Kubernetes TUI
+- [NeoVim](https://neovim.io/): Text editor
+- [Obsidian](https://obsidian.md/): Note-taking app
+- [Pulumi](https://www.pulumi.com/): Infrastructure as code
+- [Tailscale](https://tailscale.com/): Private network
+
+## Getting Started
 
 In a bash terminal (must be bash!):
 
@@ -12,6 +21,8 @@ git clone https://github.com/nwcalvank/development-environment.git
 cd development-environment
 make setup
 ```
+> [!NOTE]
+> View full setup script [here](./macos-setup.sh).
 
 You'll be prompted to provide a password to install Homebrew.
 
@@ -21,19 +32,15 @@ Time to start coding!
 
 ## Ongoing Development
 
-When making changes to your development environment, you can update the files
-directly in this repo, and then run the provided Make commands to sync the
-relevant configuration.
+The update command pulls latest versions of the applications and installs any
+newly-added apps.
 
-To update everything, you can simply run the update command:
-```
+Either of the following is supported:
+
+```bash
 make update
 ```
 
-See Makefile for the list of more precise sync commands.
-
-## Credits
-
-After years of neglect, I have updated this setup using inspiration from:
-- [ThePrimeagen](https://github.com/ThePrimeagen/init.lua)
-- [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
+```bash
+mise run update
+```
