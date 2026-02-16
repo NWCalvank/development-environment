@@ -1,3 +1,2 @@
 [tasks]
 sync = "make sync"
-update = "make update"

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#MISE description="Update apps to latest versions"
+
+make install
+make sync
