@@ -1,8 +1,5 @@
 source ~/.aliases
 
-set -a
-set +a
-
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 

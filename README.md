@@ -44,3 +44,11 @@ make update
 ```bash
 mise run update
 ```
+
+## Customization
+
+The following environment variables can be used to customize behaviour.
+
+| Variable | Description | Default Value |
+| --- | --- | --- |
+| `PRIMARY_PROJECT` | Directory to enter via alias `code` | unset |
