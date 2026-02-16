@@ -51,9 +51,9 @@ function aws-login-archera() {
     aws configure set --profile archera-"$1" aws_session_token $AWS_SESSION_TOKEN
 }
 
-function aws-login-dorsal() {
+function aws-login() {
     SESSION=$(aws configure get --profile personal role_session_name)
-    ROLE=$(aws configure get --profile dorsal role_arn)
+    ROLE=$(aws configure get --profile "$1" role_arn)
 
     res=$(aws sts assume-role --profile personal --role-session-name $SESSION --role-arn $ROLE)
 
@@ -61,13 +61,13 @@ function aws-login-dorsal() {
     AWS_SECRET_ACCESS_KEY=$(echo $res | jq -r '.Credentials.SecretAccessKey')
     AWS_SESSION_TOKEN=$(echo $res | jq -r '.Credentials.SessionToken')
 
-    aws configure set --profile dorsal aws_access_key_id $AWS_ACCESS_KEY_ID
-    aws configure set --profile dorsal aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-    aws configure set --profile dorsal aws_session_token $AWS_SESSION_TOKEN
+    aws configure set --profile "$1" aws_access_key_id $AWS_ACCESS_KEY_ID
+    aws configure set --profile "$1" aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+    aws configure set --profile "$1" aws_session_token $AWS_SESSION_TOKEN
 
-    export AWS_ACCESS_KEY_ID=$(aws configure get --profile dorsal aws_access_key_id)
-    export AWS_SECRET_ACCESS_KEY=$(aws configure --profile dorsal get aws_secret_access_key)
-    export AWS_SESSION_TOKEN=$(aws configure --profile dorsal get aws_session_token)
+    export AWS_ACCESS_KEY_ID=$(aws configure get --profile "$1" aws_access_key_id)
+    export AWS_SECRET_ACCESS_KEY=$(aws configure --profile "$1" get aws_secret_access_key)
+    export AWS_SESSION_TOKEN=$(aws configure --profile "$1" get aws_session_token)
 }
 
 function aws-export-archera() {
