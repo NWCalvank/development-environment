@@ -6,9 +6,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Activate mise
 eval "$(mise activate zsh)"
 
-# Make python3 the default python
-export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
-
 # Add psql to PATH
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
@@ -47,6 +44,7 @@ function aws-login-archera() {
     aws configure set --profile archera-"$1" aws_session_token $AWS_SESSION_TOKEN
 }
 
+# AWS Non-2FA
 function aws-login() {
     SESSION=$(aws configure get --profile personal role_session_name)
     ROLE=$(aws configure get --profile "$1" role_arn)

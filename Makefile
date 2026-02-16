@@ -64,9 +64,6 @@ install:
 	brew install neovim
 	brew install postgresql@15
 	brew install pulumi
-	brew install pyenv
-	brew install pyenv-virtualenv
-	brew install python
 	brew install ripgrep
 	brew install rustup
 	brew install stats
@@ -86,6 +83,9 @@ install:
 	brew install sqitch --with-postgres-support
 
 	# Clean up
+	brew uninstall pyenv-virtualenv
+	brew uninstall pyenv
+	brew uninstall python
 	brew cleanup
 
 setup:
