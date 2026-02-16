@@ -24,12 +24,6 @@ make sync-neovim
 # Set up zsh Shell
 make sync-zsh
 
-# Set up Node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-source ~/.bash_profile
-nvm install node  # install latest version
-nvm install --lts # install LTS version
-
 # Set up Neovim package manager
 wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
 tar zxpf luarocks-3.11.1.tar.gz

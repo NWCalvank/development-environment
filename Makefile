@@ -13,6 +13,7 @@ install:
 	brew install --cask docker
 	brew install --cask expressvpn
 	brew install --cask firefox
+	brew install --cask ghostty
 	brew install --cask google-chrome
 	brew install --cask google-drive
 	brew install --cask iterm2
@@ -58,6 +59,7 @@ install:
 	brew install krb5
 	brew install kubernetes-cli
 	brew install lua
+	brew install mise
 	brew install nasm
 	brew install neovim
 	brew install postgresql@15
@@ -116,9 +118,11 @@ sync-vim:
 
 sync-zsh:
 	touch .env
+	mkdir -p ~/.config/mise
 	cp .aliases ~/.aliases
 	cp .env ~/.env
 	cp .zshrc ~/.zshrc
+	cp mise-config.toml ~/.config/mise/config.toml
 
 update:
 	make install
