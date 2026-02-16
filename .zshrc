@@ -6,9 +6,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Activate mise
 eval "$(mise activate zsh)"
 
-# Add psql to PATH
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
-
 # Set neovim as default text editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
