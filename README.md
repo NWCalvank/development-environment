@@ -51,4 +51,6 @@ The following environment variables can be used to customize behaviour.
 
 | Variable | Description | Default Value |
 | --- | --- | --- |
+| `NEOVIM_DAY_THEME` | Colour theme used during daylight hours | dayfox |
+| `NEOVIM_NIGHT_THEME` | Colour theme used during nighttime hours | nightfox |
 | `PRIMARY_PROJECT` | Directory to enter via alias `code` | unset |

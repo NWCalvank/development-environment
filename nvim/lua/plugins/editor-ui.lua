@@ -1,8 +1,8 @@
 -- Configure Editor Colours
 vim.g.circadian_day_start = 8
 vim.g.circadian_night_start = 17
-vim.g.circadian_day_theme = 'dayfox'
-vim.g.circadian_night_theme = 'nightfox'
+vim.g.circadian_day_theme = os.getenv("NEOVIM_DAY_THEME") or 'dayfox'
+vim.g.circadian_night_theme = os.getenv("NEOVIM_NIGHT_THEME") or 'nightfox'
 
 return {
     -- Fancier statusline
