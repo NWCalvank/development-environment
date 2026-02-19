@@ -62,7 +62,6 @@ install:
 	brew install mise
 	brew install nasm
 	brew install neovim
-	brew install pulumi
 	brew install ripgrep
 	brew install rustup
 	brew install stats
@@ -82,7 +81,6 @@ install:
 	brew install sqitch --with-postgres-support
 
 	# Clean up
-	brew uninstall postgresql@15
 	brew cleanup
 
 setup:
