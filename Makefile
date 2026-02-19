@@ -16,10 +16,7 @@ install:
 	brew install --cask ghostty
 	brew install --cask google-chrome
 	brew install --cask google-drive
-	brew install --cask iterm2
-	brew install --cask itermbrowserplugin
 	brew install --cask obsidian
-	brew install --cask slack
 	brew install --cask sqlectron
 	brew install --cask tailscale-app
 	brew install --cask whatsapp
@@ -28,6 +25,7 @@ install:
 	brew install --cask aws-vpn-client
 	brew install --cask google-cloud-sdk
 	brew install --cask microsoft-teams
+	brew install --cask slack
 	gcloud components install gke-gcloud-auth-plugin
 
 	# Install Other Tools
@@ -44,7 +42,6 @@ install:
 	brew install gcc
 	brew install gdbm
 	brew install gettext
-	brew install gh
 	brew install giflib
 	brew install git
 	brew install gmp
@@ -74,13 +71,16 @@ install:
 	# Install Work Tools
 	brew install argo
 	brew install azure-cli
-	brew install uv
 
 	# Install Tap Apps
 	brew install hashicorp/tap/terraform
 	brew install sqitch --with-postgres-support
 
 	# Clean up
+	brew uninstall --cask iterm2
+	brew uninstall --cask itermbrowserplugin
+	brew uninstall gh
+	brew uninstall uv
 	brew cleanup
 
 setup:
