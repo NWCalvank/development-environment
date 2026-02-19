@@ -4,3 +4,5 @@
 
 make install
 make sync
+
+mise prune -y
