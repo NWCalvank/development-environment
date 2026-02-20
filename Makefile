@@ -30,7 +30,6 @@ install:
 
 	# Install Other Tools
 	brew install argocd
-	brew install awscli
 	brew install aws-iam-authenticator
 	brew install bash-completion
 	brew install brotli
@@ -77,10 +76,7 @@ install:
 	brew install sqitch --with-postgres-support
 
 	# Clean up
-	brew uninstall --cask iterm2
-	brew uninstall --cask itermbrowserplugin
-	brew uninstall gh
-	brew uninstall uv
+	brew uninstall awscli
 	brew cleanup
 
 setup:

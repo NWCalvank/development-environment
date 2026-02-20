@@ -1,4 +1,5 @@
 [tools]
+aws-cli = { version = "2.33.26", symlink_bins = "true" }
 gh = "2.87.0"
 node = "24.13.1"
 python = "3.14.3"
