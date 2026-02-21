@@ -29,16 +29,16 @@ install:
 	gcloud components install gke-gcloud-auth-plugin
 
 	# Install Other Tools
-	brew install argocd
+	brew uninstall argocd
 	brew install aws-iam-authenticator
 	brew install bash-completion
 	brew install brotli
-	brew install brogue
+	brew uninstall brogue
 	brew install c-ares
 	brew install ca-certificates
 	brew install cmake
 	brew install eksctl
-	brew install gcc
+	brew uninstall gcc
 	brew install gdbm
 	brew install gettext
 	brew install giflib
@@ -50,7 +50,7 @@ install:
 	brew install isl
 	brew install jpeg
 	brew install jpeg-turbo
-	brew install jq
+	brew uninstall jq
 	brew install k9s
 	brew install krb5
 	brew install kubernetes-cli
@@ -109,7 +109,7 @@ sync-vim:
 
 sync-zsh:
 	mkdir -p ~/.config/mise
-	cp mise-config.toml ~/.config/mise/config.toml
+	cp mise-global.toml ~/.config/mise/config.toml
 	cp .aliases ~/.aliases
 	cp .zshrc ~/.zshrc
 
