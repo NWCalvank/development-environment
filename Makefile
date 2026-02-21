@@ -29,16 +29,13 @@ install:
 	gcloud components install gke-gcloud-auth-plugin
 
 	# Install Other Tools
-	brew uninstall argocd
 	brew install aws-iam-authenticator
 	brew install bash-completion
 	brew install brotli
-	brew uninstall brogue
 	brew install c-ares
 	brew install ca-certificates
 	brew install cmake
 	brew install eksctl
-	brew uninstall gcc
 	brew install gdbm
 	brew install gettext
 	brew install giflib
@@ -50,8 +47,7 @@ install:
 	brew install isl
 	brew install jpeg
 	brew install jpeg-turbo
-	brew uninstall jq
-	brew install k9s
+	brew uninstall k9s
 	brew install krb5
 	brew install kubernetes-cli
 	brew install lua
@@ -76,7 +72,6 @@ install:
 	brew install sqitch --with-postgres-support
 
 	# Clean up
-	brew uninstall awscli
 	brew cleanup
 
 setup:
