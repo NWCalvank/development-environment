@@ -47,9 +47,7 @@ install:
 	brew install isl
 	brew install jpeg
 	brew install jpeg-turbo
-	brew uninstall k9s
 	brew install krb5
-	brew install kubernetes-cli
 	brew install lua
 	brew install mise
 	brew install nasm
@@ -64,7 +62,6 @@ install:
 	brew install yarn
 
 	# Install Work Tools
-	brew install argo
 	brew install azure-cli
 
 	# Install Tap Apps
