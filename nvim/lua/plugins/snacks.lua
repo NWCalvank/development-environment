@@ -25,9 +25,9 @@ return {
     },
     explorer = { enabled = false },
     indent = { enabled = true },
-    input = { enabled = false },
+    input = { enabled = true },
     picker = { enabled = true },
-    notifier = { enabled = false },
+    notifier = { enabled = true },
     quickfile = { enabled = false },
     scope = { enabled = false },
     scroll = { enabled = false },
@@ -39,12 +39,12 @@ return {
     -- Top Pickers & Explorer
     { "<leader>k",  function() Snacks.picker.smart() end,                     desc = "Smart Find Files" },
     { "<leader>h",  function() Snacks.picker.buffers() end,                   desc = "Buffers" },
-    { "<leader>g", function() Snacks.picker.grep() end,                       desc = "Grep" },
+    { "<leader>g",  function() Snacks.picker.grep() end,                      desc = "Grep" },
     { "<leader>:",  function() Snacks.picker.command_history() end,           desc = "Command History" },
     { "<leader>n",  function() Snacks.picker.notifications() end,             desc = "Notification History" },
     -- LSP
     { "gd",         function() Snacks.picker.lsp_definitions() end,           desc = "Goto Definition" },
-    { "gr",         function() Snacks.picker.lsp_references() end,            nowait = true,                desc = "References" },
+    { "gr",         function() Snacks.picker.lsp_references() end,            nowait = true, desc = "References" },
     -- Other
     { "<leader>d",  function() Snacks.dashboard({ example = "pokemon" }) end, desc = "Show Dashboard" },
     { "<leader>z",  function() Snacks.zen() end,                              desc = "Toggle Zen Mode" },
