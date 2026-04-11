@@ -45,12 +45,21 @@ make update
 mise run update
 ```
 
+## Helper Functions
+
+```
+aws-login <profile>
+aws-login-mfa <profile> <mfa-code>
+```
+
+
 ## Customization
 
 The following environment variables can be used to customize behaviour.
 
 | Variable | Description | Default Value |
 | --- | --- | --- |
+| `AWS_DEFAULT_PROFILE` | Default profile for AWS CLI functions | unset |
 | `NEOVIM_DAY_THEME` | Colour theme used during daylight hours | dayfox |
 | `NEOVIM_NIGHT_THEME` | Colour theme used during nighttime hours | nightfox |
 | `PRIMARY_PROJECT` | Directory to enter via alias `code` | unset |

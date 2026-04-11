@@ -25,20 +25,20 @@ export PROMPT='${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}${NEWLI
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # AWS 2FA
-function aws-login-archera() {
-    SERIAL_NUMBER=$(aws configure get --profile archera mfa_serial)
-    SESSION=$(aws configure get --profile archera role_session_name)
-    ROLE=$(aws configure get --profile archera-"$1" role_arn)
+function aws-login-mfa() {
+    SERIAL_NUMBER=$(aws configure get --profile $AWS_DEFAULT_PROFILE mfa_serial)
+    SESSION=$(aws configure get --profile $AWS_DEFAULT_PROFILE role_session_name)
+    ROLE=$(aws configure get --profile "$1" role_arn)
 
-    res=$(aws sts assume-role --profile archera --duration-seconds 43200 --serial-number $SERIAL_NUMBER --role-session-name $SESSION --role-arn $ROLE --token-code "$2")
+    res=$(aws sts assume-role --profile $AWS_DEFAULT_PROFILE --serial-number $SERIAL_NUMBER --role-session-name $SESSION --role-arn $ROLE --token-code "$2")
 
     AWS_ACCESS_KEY_ID=$(echo $res | jq -r '.Credentials.AccessKeyId')
     AWS_SECRET_ACCESS_KEY=$(echo $res | jq -r '.Credentials.SecretAccessKey')
     AWS_SESSION_TOKEN=$(echo $res | jq -r '.Credentials.SessionToken')
 
-    aws configure set --profile archera-"$1" aws_access_key_id $AWS_ACCESS_KEY_ID
-    aws configure set --profile archera-"$1" aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-    aws configure set --profile archera-"$1" aws_session_token $AWS_SESSION_TOKEN
+    aws configure set --profile "$1" aws_access_key_id $AWS_ACCESS_KEY_ID
+    aws configure set --profile "$1" aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+    aws configure set --profile "$1" aws_session_token $AWS_SESSION_TOKEN
 }
 
 # AWS Non-2FA
@@ -61,10 +61,10 @@ function aws-login() {
     export AWS_SESSION_TOKEN=$(aws configure --profile "$1" get aws_session_token)
 }
 
-function aws-export-archera() {
-    export AWS_ACCESS_KEY_ID=$(aws configure get --profile archera-"$1" aws_access_key_id)
-    export AWS_SECRET_ACCESS_KEY=$(aws configure --profile archera-"$1" get aws_secret_access_key)
-    export AWS_SESSION_TOKEN=$(aws configure --profile archera-"$1" get aws_session_token)
+function aws-export() {
+    export AWS_ACCESS_KEY_ID=$(aws configure get --profile "$1" aws_access_key_id)
+    export AWS_SECRET_ACCESS_KEY=$(aws configure --profile "$1" get aws_secret_access_key)
+    export AWS_SESSION_TOKEN=$(aws configure --profile "$1" get aws_session_token)
 }
 
 # AWS CLI Helpers
