@@ -11,7 +11,6 @@ install:
 	brew install --cask alfred
 	brew install --cask balenaetcher
 	brew install --cask docker
-	brew install --cask expressvpn
 	brew install --cask firefox
 	brew install --cask ghostty
 	brew install --cask google-chrome
