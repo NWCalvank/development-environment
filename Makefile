@@ -9,6 +9,7 @@ install:
 
 	# Install Some Apps I Like
 	brew install --cask alfred
+	brew install --cask anki
 	brew install --cask balenaetcher
 	brew install --cask docker
 	brew install --cask firefox
@@ -24,7 +25,7 @@ install:
 	brew install --cask aws-vpn-client
 	brew install --cask google-cloud-sdk
 	brew install --cask microsoft-teams
-	brew install --cask slack
+	# brew install --cask slack
 	gcloud components install gke-gcloud-auth-plugin
 
 	# Install Other Tools
